@@ -17,7 +17,7 @@ pipeline {
                   stage ('Deploying container on remote server') {
                       steps {
                           script {
-                           def dockerRun ='docker run -d -p 8091:80 c67ad8c593e9'
+                           def dockerRun ='docker run -d -p 8091:80 049742470590.dkr.ecr.us-east-1.amazonaws.com/myecrrepo:latest'
                               sshagent(['UBUNTU']) {
                               sh "ssh -o StrictHostKeyChecking=no ubuntu@172.31.87.200 ${dockerRun}"
                           }
