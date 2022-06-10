@@ -14,7 +14,7 @@ pipeline {
                   stage ('Deploying container on remote server') {
                       steps {
                           script {
-                           def dockerrun ='docker run -d -p 8091:80 c67ad8c593e9"
+                           def dockerrun ="docker run -d -p 8091:80 c67ad8c593e9"
                              sshagent(['SSHAGENT']) 
                               {
                                   
